@@ -1,0 +1,43 @@
+v1.1
+-Actions are now their own class rather than delegates, as it was a pain and ugly to add new types of actions. Made all associated changes to code
+-Fighter stats (hp, mp, speed, attack, defence etc) now work like a "dictionary" by matching string names to their stats using GetStat() and SetStat(). This allows attacks to be set more easily (pass in what stats to check against each other by a string)
+-TakeAction now uses IsAssignableFrom instead of IsSubclassOf
+-TextMenuManager now does the work of advancing flavor text boxes etc. 
+-BattlePositions are handled by a manager
+-Every Fighter has a Basic Attack
+-Every fighter has a unique ID.
+-Removed the Struct "Option" in MenuOption script and moved its variables to MenuOption
+-Players' skills are now dynamically populated at the beginning of their turn through MenuManager, rather than having been hardcoded
+-MenuManager now handles switching to the menu to select target for an action
+-Fighters are actually sorted by speed now
+-Consolidated Removing Players and Enemies from the fight in FightManager.cs
+-"[Name] went down!" and "Critical Hit!" are now displayed on taking down anyone in battle/landing a crit respectively
+-Game Over text before transition
+-Level up formulae now takes into account individual stat modifiers to customize levelling up (e.g. tanks can level up def 2x as high, but spAtk 0.3x)
+-Tooltips for PlayerFighter's LevelUpModifiers, and Fighter.cs's Basic Attack variable.
+-Consolidated Losing/Gaining hp and mana into UpdateHealth and UpdateMana respectively
+-Stat modifiers stored in a list that gets reset at the end of every battle
+-Fight Manager resets state after a battle + removes children
+-Skills are learnt upon levelling up (NOTE: make sure they don't have the same script name!)
+-All audio is now handled by an audio manager class with one source for music, and another for sound effects.
+-Skill menu dynamically populates amount of cursor options as well.
+-TextManager has been split into a DialogueManager and BattleTextManager
+-DialogueTriggers for forced and playerPrompted dialogue consolidated into one class
+-Added a tutorial level and basic README
+
+TODO:
+
+-Update Readme
+-More Sounds
+-Resetting Positions after fights
+-Give enemies more attacks
+-Cursors cleanup
+-Testing ModifierAttacks
+-Recovery outside of battle
+-Saving
+-Tooltips
+-Clean up finding the back button for SetSkill() in MenuManager
+-Make back buttons special + dynamic Menus
+
+itch.io - https://xavi-smith.itch.io/resist
+sounds - SFx - https://freesound.org/people/Cabeeno%20Rossley/
