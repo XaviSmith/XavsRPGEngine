@@ -6,7 +6,7 @@ This is a basic RPG engine for Unity I created completely from scratch for my en
 
 The original engine and project was lost, and so I decided to remake and improve upon the project in my free time over the past few months and make it open source on GitHub as a project for myself, and will be updating it every so often. My goal is to eventually have it function as a free standalone RPG engine for Unity!
 
-The general working of the engine will be described below, but in short it is split into 2 sections, **Overworld** and *Battle*. If you want a general idea of how the code works, the gist of battling is outlined in FightManager.cs, PlayerManager.cs, Fighter.cs, PlayerFighter.cs, and EnemyManager.cs. Menus are mostly handled through MenuManager.cs, Menu.cs, and TextManager.cs. 
+The general working of the engine will be described below, but in short it is split into 2 sections, **Overworld** and *Battle*. If you want a general idea of how the code works, the gist of battling is outlined in Assets->Scripts-> FightManager.cs, PlayerManager.cs, Fighter.cs, PlayerFighter.cs, and EnemyManager.cs. Menus are mostly handled through Assets-> Scripts -> MenuManager.cs, Menu.cs, and TextManager.cs. 
 
 Credits to Cabeeno Rossley ( https://freesound.org/people/Cabeeno%20Rossley/ ) for sounds and KenneyNL ( http://www.kenney.nl/ ) for the sprites.
 
