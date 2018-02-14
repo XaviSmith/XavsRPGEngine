@@ -41,6 +41,7 @@ public class PlayerManager : Singleton<PlayerManager> {
             if(player.status != Fighter.CONDITION.Dead)
             {
                 currPlayer = player;
+                FightManager.instance.currFighter = player;
                 PlayerNameBox.instance.myText.text = currPlayer.myName;
                 MenuManager.instance.SetSkills();
                 while(!player.actionSet)

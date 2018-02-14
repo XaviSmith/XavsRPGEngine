@@ -17,17 +17,29 @@ public class SpellAttack : Attack {
 
     public override void SetAction()
     {
-        if(user.currMp > manaCost)
+        if(user.fighterType == "Enemy")
         {
             base.SetAction();
-            MenuManager.instance.SelectFighter(targetsPlayers);
         }
-        
+        else if(user.currMp >= manaCost)
+        {
+            base.SetAction();
+            MenuManager.instance.SelectFighter(targetsPlayers);      
+        }
     }
 
     public override void Execute(Fighter target)
     {
-        user.currMp -= manaCost;
-        base.Execute(target);
+        //in case the action is selected by an enemy that lacks the mana, or the player lost too much mana to use this attack before their turn.
+        if(user.currMp < manaCost)
+        {
+            returnedText = user.myName + " tried to use " + attackName + " but failed!";
+            BattleTextManager.instance.SetText(returnedText);
+        }
+        else
+        {
+            user.currMp -= manaCost;
+            base.Execute(target);
+        }      
     }
 }

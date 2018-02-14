@@ -12,9 +12,19 @@ public class EnemyFighter : Fighter {
 
     public Image battleSprite;
 
+    public EnemyFighter()
+    {
+        fighterType = "Enemy";
+    }
     public override void Die()
     {
         base.Die();
         battleSprite.color = new Color(0.4f, 0.4f, 0.4f, 0.4f);
+    }
+
+    public Action SelectAction()
+    {
+        int choice = UnityEngine.Random.Range(0, myActions.Count);
+        return myActions[choice];
     }
 }

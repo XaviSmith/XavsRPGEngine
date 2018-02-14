@@ -8,11 +8,15 @@ public class PlayerFighter : Fighter {
     //Affects stat growth on level up (e.g. we'd want a tank to level up defence at a higher rate than mp)
     [Tooltip("Modifiers when levelling up hp, mp, atk, def, spAtk, spDef, and speed respectively for this character.")]
     public List<float> levelUpModifiers = new List<float>(new float[] { 1, 1, 1, 1, 1, 1, 1 });
-
     public List<PlayerFighter> partyMembers;
     public int expToNextLev = 100;
 
-	public void GainExp(int expGain)
+    public PlayerFighter()
+    {
+        fighterType = "Player";
+    }
+    
+    public void GainExp(int expGain)
     {
         exp += expGain;
 

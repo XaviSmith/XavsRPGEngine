@@ -14,7 +14,8 @@ public abstract class Action : MonoBehaviour {
 
     public virtual void SetAction()
     {
-        PlayerManager.instance.currPlayer.SetAction(this);
+        //PlayerManager.instance.currPlayer.SetAction(this);
+        FightManager.instance.currFighter.SetAction(this);
     }
 
     public virtual void SetTarget(Fighter target)

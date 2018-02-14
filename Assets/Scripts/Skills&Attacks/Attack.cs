@@ -19,7 +19,8 @@ public class Attack : Action {
 
     public override void SetAction()
     {
-        PlayerManager.instance.currPlayer.SetAction(this);
+        //PlayerManager.instance.currPlayer.SetAction(this);
+        FightManager.instance.currFighter.SetAction(this);
     }
 
     public Attack(string _attackStat, string _defenceStat)

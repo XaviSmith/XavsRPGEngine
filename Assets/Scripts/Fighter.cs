@@ -6,6 +6,8 @@ using UnityEngine;
 public class Fighter : MonoBehaviour {
 
     public string myName;
+    [HideInInspector]
+    public string fighterType; //easy way to determine what type of fighter we are (e.g. "Player", "Enemy", "Boss")
     public int myID;    //Unique ID that lets us distinguish characters, bosses, enemy types etc. 1-30 marks party memebers. 30+ marks enemies
 
     /* I originally tried to store stats in a Dictionary<string,int> e.g. stats["Hp" : 100], however Unity does not support showing Dictionaries or Hashtables in the inspector, 

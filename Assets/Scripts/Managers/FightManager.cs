@@ -194,10 +194,11 @@ public class FightManager : Singleton<FightManager> {
     //Execute a player's selected action, or decide an action for an enemy.
     public void TakeAction()
     {
-        if (currFighter.GetType().IsAssignableFrom(typeof(EnemyFighter))) //If enemy, decide their action
+        if (currFighter.fighterType == "Enemy") //If enemy, decide their action
         {
             EnemyFighter tempFighter = currFighter as EnemyFighter;
-            currFighter.myAction = tempFighter.myActions[0];
+            //currFighter.myAction = tempFighter.myActions[0];
+            currFighter.myAction = tempFighter.SelectAction();
             currFighter.myTarget = players[0];
         }
 
@@ -317,13 +318,13 @@ public class FightManager : Singleton<FightManager> {
     //When a player/enemy dies, remove them from the fight.
     public void RemoveFighter(Fighter f)
     {
-        if(f.GetType().IsAssignableFrom(typeof(EnemyFighter)))
+        if(f.fighterType == "Enemy")
         {
             EnemyFighter e = f as EnemyFighter;
             RemoveEnemy(e);
         }
 
-        else if(f.GetType().IsAssignableFrom(typeof(PlayerFighter)))
+        else if(f.fighterType == "Player")
         {
             PlayerFighter p = f as PlayerFighter;
             RemovePlayer(p);
