@@ -30,6 +30,7 @@ v1.11
 * Added a function to check what type of fighter we are inside Fighter.cs (e.g. "Player", "Enemy", "Boss") and implemented it in relevant places
 * EnemyFighter.cs now select an attack at random for the fight.
 * SpellAttacks now check your mana right before you use the attack to account for enemies goofing around/in case you lost mana before your turn
+
 v1.1  
   
 * Actions are now their own class rather than delegates, as it was a pain and ugly to add new types of actions. Made all associated changes to code  
@@ -75,6 +76,9 @@ This section will very briefly go over setting up your own RPG area with battles
 
 ## TODO
 
+* Show player HP/MP
+* Let enemies attack players at random
+* Better indication of what attack was used
 * Update Readme  
 * More Sounds  
 * Resetting Positions after fights  
