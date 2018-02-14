@@ -23,6 +23,13 @@ Credits to Cabeeno Rossley ( https://freesound.org/people/Cabeeno%20Rossley/ ) f
 *A ready-to-go tutorial.
 
 ## Changelog 
+v1.11
+
+* FightManager now keeps track of the current player selecting their turn (may consolodiate FightManager and PlayerFighter's currFighter/Player into one later on)
+* SetAction updated to account for being called by EnemyFighters as well for all callers
+* Added a function to check what type of fighter we are inside Fighter.cs (e.g. "Player", "Enemy", "Boss") and implemented it in relevant places
+* EnemyFighter.cs now select an attack at random for the fight.
+* SpellAttacks now check your mana right before you use the attack to account for enemies goofing around/in case you lost mana before your turn
 v1.1  
   
 * Actions are now their own class rather than delegates, as it was a pain and ugly to add new types of actions. Made all associated changes to code  
