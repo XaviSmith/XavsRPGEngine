@@ -3,6 +3,7 @@ v1.12
 -You can now see the current player's HP and MP during the fight
 -Enemies have a function to set their own turn + choose a player to attack at random
 -Added "Confusion" status, enemies can attack both friend and foe if confused
+-Added music for battles
 
 TODO:
 -Better indication of what attack was used
@@ -23,3 +24,4 @@ TODO:
 
 itch.io - https://xavi-smith.itch.io/resist
 sounds - SFx - https://freesound.org/people/Cabeeno%20Rossley/
+music - Battle Theme: https://www.newgrounds.com/audio/listen/525490 

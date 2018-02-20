@@ -23,6 +23,13 @@ Credits to Cabeeno Rossley ( https://freesound.org/people/Cabeeno%20Rossley/ ) f
 *A ready-to-go tutorial.
 
 ## Changelog 
+v1.12
+
+* You can now see the current player's HP and MP during the fight
+* Enemies have a function to set their own turn + choose a player to attack at random
+* Added "Confusion" status, enemies can attack both friend and foe if confused
+* Added music for battles and Overworld
+
 v1.11
 
 * FightManager now keeps track of the current player selecting their turn (may consolodiate FightManager and PlayerFighter's currFighter/Player into one later on)
