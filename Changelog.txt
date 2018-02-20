@@ -3,12 +3,12 @@ v1.12
 -You can now see the current player's HP and MP during the fight
 -Enemies have a function to set their own turn + choose a player to attack at random
 -Added "Confusion" status, enemies can attack both friend and foe if confused
--Added music for battles
+-Added music for battles and overworld
 
 TODO:
 -Better indication of what attack was used
 -More Sounds
--Resetting Positions after fights
+-Resetting Position etc after fights
 -Revamp UI
 -Give each attack a weighting for AI selection
 -See if I can consolidate PlayerFighter's currPlayer and FightManager's currFighter into one.
@@ -25,3 +25,4 @@ TODO:
 itch.io - https://xavi-smith.itch.io/resist
 sounds - SFx - https://freesound.org/people/Cabeeno%20Rossley/
 music - Battle Theme: https://www.newgrounds.com/audio/listen/525490 
+	Tutorial Area: https://www.newgrounds.com/audio/listen/707698
