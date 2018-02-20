@@ -83,11 +83,10 @@ This section will very briefly go over setting up your own RPG area with battles
 
 ## TODO
 
-* Show player HP/MP
-* Let enemies attack players at random
 * Better indication of what attack was used
-* Update Readme  
 * More Sounds  
+* Revamp UI
+* Give each attack a weighting for AI selection
 * Resetting Positions after fights  
 * Give enemies more attacks  
 * Cursors cleanup  
