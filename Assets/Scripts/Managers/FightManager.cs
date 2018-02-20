@@ -197,9 +197,7 @@ public class FightManager : Singleton<FightManager> {
         if (currFighter.fighterType == "Enemy") //If enemy, decide their action
         {
             EnemyFighter tempFighter = currFighter as EnemyFighter;
-            //currFighter.myAction = tempFighter.myActions[0];
-            currFighter.myAction = tempFighter.SelectAction();
-            currFighter.myTarget = players[0];
+            tempFighter.SetTurn();
         }
 
         currFighter.myAction.Execute(currFighter.myTarget);

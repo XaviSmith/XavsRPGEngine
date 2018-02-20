@@ -147,7 +147,7 @@ public class Fighter : MonoBehaviour {
         }
     }
 
-    public enum CONDITION { Ok, Poison, Sleep, Dead }
+    public enum CONDITION { Ok, Poison, Sleep, Confused, Dead }
     public CONDITION status;
 
     public bool turnSet;

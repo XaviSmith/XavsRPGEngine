@@ -1,13 +1,15 @@
 v1.12
 
 -You can now see the current player's HP and MP during the fight
+-Enemies have a function to set their own turn + choose a player to attack at random
+-Added "Confusion" status, enemies can attack both friend and foe if confused
 
 TODO:
--Let enemies attack players at random
 -Better indication of what attack was used
 -More Sounds
 -Resetting Positions after fights
--Give each attack a weighting
+-Revamp UI
+-Give each attack a weighting for AI selection
 -See if I can consolidate PlayerFighter's currPlayer and FightManager's currFighter into one.
 -Update Readme
 -Give enemies more attacks

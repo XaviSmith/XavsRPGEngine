@@ -22,9 +22,30 @@ public class EnemyFighter : Fighter {
         battleSprite.color = new Color(0.4f, 0.4f, 0.4f, 0.4f);
     }
 
-    public Action SelectAction()
+    public void SetTurn()
+    {
+        SelectAction();     
+        SelectTarget();
+    }
+    public void SelectAction()
     {
         int choice = UnityEngine.Random.Range(0, myActions.Count);
-        return myActions[choice];
+        myAction = myActions[choice];
+    }
+
+    public void SelectTarget()
+    {
+        int choice;
+        if (status == CONDITION.Confused)
+        {
+           choice = UnityEngine.Random.Range(0, FightManager.instance.fighters.Count);
+           myTarget = FightManager.instance.fighters[choice];
+        }
+        else
+        {
+            choice = UnityEngine.Random.Range(0, FightManager.instance.players.Count);
+            myTarget = FightManager.instance.players[choice];
+        }
+       
     }
 }
