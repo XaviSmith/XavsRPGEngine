@@ -97,7 +97,7 @@ public class FightManager : Singleton<FightManager> {
 
 
                 players[i].menuObj.myObj = players[i].gameObject;
-                players[i].menuObj.myText = players[i].menuObj.GetComponent<Text>(); //We have to set the menuItem's myText because unity does not let it call any functions like Awake() etc when it's inactive.
+                players[i].menuObj.myText = players[i].menuObj.GetComponent<Text>(); //We have to set the menuItem's nameBox because unity does not let it call any functions like Awake() etc when it's inactive.
                 players[i].menuObj.myText.text = players[i].myName;
             }
             else //Remove extraneous options from menus (it's a lot easier to remove extra options than dynamically populate new ones)
@@ -131,7 +131,7 @@ public class FightManager : Singleton<FightManager> {
 
 
                 enemies[i].menuObj.myObj = enemies[i].gameObject;
-                enemies[i].menuObj.myText = enemies[i].menuObj.GetComponent<Text>(); //We have to set the menuItem's myText because unity does not let it call any functions like Awake() etc when it's inactive.
+                enemies[i].menuObj.myText = enemies[i].menuObj.GetComponent<Text>(); //We have to set the menuItem's nameBox because unity does not let it call any functions like Awake() etc when it's inactive.
                 enemies[i].menuObj.myText.text = enemies[i].myName;
             }
             else

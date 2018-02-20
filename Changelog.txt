@@ -1,13 +1,8 @@
-v1.11
+v1.12
 
--FightManager now keeps track of the current player selecting their turn (may consolodiate FightManager and PlayerFighter's currFighter/Player into one later on)
--SetAction updated to account for being called by EnemyFighters as well for all callers
--Added a function to check what type of fighter we are inside Fighter.cs (e.g. "Player", "Enemy", "Boss") and implemented it in relevant places
--EnemyFighter.cs now select an attack at random for the fight.
--SpellAttacks now check your mana right before you use the attack to account for enemies goofing around/in case you lost mana before your turn
+-You can now see the current player's HP and MP during the fight
 
 TODO:
--Show player HP/MP
 -Let enemies attack players at random
 -Better indication of what attack was used
 -More Sounds

@@ -35,14 +35,17 @@ public class PlayerManager : Singleton<PlayerManager> {
 
     IEnumerator WaitOnActions()
     {
-        yield return new WaitForSeconds(0.1f);  //Wait a little bit so PlayerNameBox and currPlayer can set.
+        PlayerBattleUI.instance.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.1f);  //Wait a little bit so PlayerBattleUI and currPlayer can set.
         foreach(PlayerFighter player in players)
         {
             if(player.status != Fighter.CONDITION.Dead)
             {
                 currPlayer = player;
                 FightManager.instance.currFighter = player;
-                PlayerNameBox.instance.myText.text = currPlayer.myName;
+                PlayerBattleUI.instance.nameBox.text = currPlayer.myName;
+                PlayerBattleUI.instance.hpBox.text = currPlayer.currHp.ToString() + "/" + currPlayer.hp.ToString();
+                PlayerBattleUI.instance.mpBox.text = currPlayer.currMp.ToString() + "/" + currPlayer.mp.ToString();
                 MenuManager.instance.SetSkills();
                 while(!player.actionSet)
                 {
@@ -55,7 +58,7 @@ public class PlayerManager : Singleton<PlayerManager> {
         {
             player.actionSet = false;
         }
-        PlayerNameBox.instance.myText.text = "";
+        PlayerBattleUI.instance.gameObject.SetActive(false);
         MenuManager.instance.currentMenu.gameObject.SetActive(false);
         actionsSet = true;
     }
